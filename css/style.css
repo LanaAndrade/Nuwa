@@ -9,6 +9,7 @@ nav{
     height: 80px;
     position: fixed;
     box-shadow: 0 0 0.5em black;
+    z-index: 999;
 }
 
 #bntMenuLogo{
@@ -56,6 +57,7 @@ nav ul li button{
 }
 
 nav ul li button:hover{
+    transition: .3s ease;
     color: #0066FF;
     border-bottom: 2px solid #0066FF;
 }
@@ -66,10 +68,12 @@ nav ul li button:hover{
     font-size: 30px;
     display: none;
     position: fixed;
+    z-index: 999;
 }
 
 #menuResonsivoCheckbox{
-    display: none;
+    display: block;
+    z-index: 999;
 }
 
 @media(max-width: 952px){
@@ -85,16 +89,23 @@ nav ul li button:hover{
 
     }
     
+    #menuResonsivoCheckbox{
+        display: block;
+        position: fixed;
+    }
+
     .bntMenuResponsivoCheckbox{
         display: block;
+        z-index: 999;
     }
     nav ul{
+        left: 450px;
         margin: 60%;
         margin-top: 80px;
         position: fixed;
         width: 40%;
         height: 85%;
-        transition: all .5s;;
+        transition: all .5s;
     }
     nav ul li{
         width: 100%;
@@ -109,7 +120,7 @@ nav ul li button:hover{
         border-top: 2px solid  #dcdcdc;
     }
 
-    #menuResonsivoCheckbox:checked{
-
+    #menuResonsivoCheckbox:checked ~ nav ul{
+        left: -450px;
     } 
 }
