@@ -42,7 +42,7 @@ nav ul li{
     height: 100%;
     text-align: center;
     list-style: none;
-    line-height: 80px;
+    
     
 }
 
@@ -72,34 +72,25 @@ nav ul li button:hover{
 }
 
 #menuResonsivoCheckbox{
-    display: block;
+    display: none;
     z-index: 999;
 }
 
 @media(max-width: 952px){
    
     nav ul li button{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
 @media(max-width: 858px){
-
-    nav{
-
-    }
     
-    #menuResonsivoCheckbox{
-        display: block;
-        position: fixed;
-    }
-
     .bntMenuResponsivoCheckbox{
         display: block;
         z-index: 999;
     }
     nav ul{
-        left: 450px;
+        
         margin: 60%;
         margin-top: 80px;
         position: fixed;
@@ -120,7 +111,7 @@ nav ul li button:hover{
         border-top: 2px solid  #dcdcdc;
     }
 
-    #menuResonsivoCheckbox:checked ~ nav ul{
-        left: -450px;
+    #menuResonsivoCheckbox:checked ~ .ulMenu{
+        display: none;
     } 
 }
