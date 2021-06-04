@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;    
+    font-family: 'Raleway';
+
 }
 
 nav{
@@ -42,7 +44,7 @@ nav ul li{
     height: 100%;
     text-align: center;
     list-style: none;
-    
+
     
 }
 
@@ -115,3 +117,8 @@ nav ul li button:hover{
         display: none;
     } 
 }
+@font-face {
+    font-family: 'Raleway';
+    src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    }
+    
