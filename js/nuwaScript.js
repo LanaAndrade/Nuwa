@@ -52,3 +52,24 @@ function carrossel(){
   }
   repeat();
 }
+
+//Efeito rolagem
+//javascript for navigation bar effects on scroll
+window.addEventListener("scroll", function(){
+const header = document.querySelector("header");
+header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+//Modo escuro
+const htmlEl = document.getElementsByTagName('html')[0];
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+  htmlEl.dataset.theme = currentTheme;
+}
+
+// When the user changes the theme, we need to save the new value on local storage
+const toggleTheme = (theme) => {
+  htmlEl.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+}

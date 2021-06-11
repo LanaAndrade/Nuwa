@@ -11,8 +11,6 @@
         <script type="text/javascript" src="js/nuwaScript.js"></script>
 
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
     </head>
     <body>
         <header>
@@ -22,16 +20,16 @@
                     <i class="fas fa-bars"></i>
                 </label>
 
-                <button id="bntMenuLogo"><img src="./img/logoNuwa.png" id="logo" alt="Logo da Nüwa"></button>
+                <button id="bntMenuLogo" onclick="location.href='#carrossel'"><img src="./img/logoNuwa.png" id="logo" alt="Logo da Nüwa"></button>
 
                 <ul class="ulMenu">
-                    <li><button>Início</button></li>
-                    <li><button>Sobre</button></li>
-                    <li><button>História</button></li>
-                    <li><button>Desenvolvedores</button></li>
-                    <li><button>Produtos</button></li>
-                    <li><button>Contato</button></li>
-                    <li><button id="btnMenuTemaEscuro"><img src="./img/luaModoEscuro.png" id="imgBtnMenuTemaEscuro" alt="Imagem Lua"></button></li>
+                    <li><button onclick="location.href='#carrossel'">Início</button></li>
+                    <li><button onclick="location.href='#sobre'">Sobre</button></li>
+                    <li><button onclick="location.href='#historia'">História</button></li>
+                    <li><button onclick="location.href='#desenvolvedores'">Desenvolvedores</button></li>
+                    <li><button onclick="location.href='#produtos'">Produtos</button></li>
+                    <li><button onclick="location.href='#contato'">Contato</button></li>
+                    <li><button id="btnMenuTemaEscuro" onclick="toggleTheme('dark');"><img src="./img/luaModoEscuro.png" id="imgBtnMenuTemaEscuro" alt="Logo da Nüwa"></button></li>
                 </ul>
 
             </nav>
@@ -41,35 +39,35 @@
             <figure id="carrossel">
                     <div class="img-slider">
                         <div class="slide active">
-                            <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" alt="">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
                             <div class="info">
                                 <h2></h2>
                                 <p></p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" alt="">
+                            <img src="https://image.freepik.com/fotos-gratis/quimicos-realizando-experimentos_1098-17095.jpg" alt="">
                             <div class="info">
                                 <h2></h2>
                                 <p></p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" alt="">
+                            <img src="https://image.freepik.com/fotos-gratis/pesquisadora-no-laboratorio-com-oculos-de-seguranca_23-2148816389.jpg" alt="">
                             <div class="info">
                                 <h2></h2>
                                 <p></p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" alt="">
+                            <img src="https://image.freepik.com/fotos-gratis/retrato-de-pesquisadora-em-laboratorio-com-tubo-de-ensaio-e-espaco-de-copia_23-2148816383.jpg" alt="">
                             <div class="info">
                                 <h2></h2>
                                 <p></p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" alt="">
+                            <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
                             <div class="info">
                                 <h2></h2>
                                 <p></p>
@@ -99,7 +97,7 @@
             <div id="textoSobre" class="textoComImagemFilho">
                 <h2 class="titulosH2 txt">Sobre</h2>
                 <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Nossa empresa busca trazer softwares práticos, modernos, ágeis, simples, competentes e seguros que possam facilitar a vida dos usuários durante seu dia a dia. 
                 </p>
             </div>
         </section>
@@ -121,19 +119,19 @@
             <div class="fileira">
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="../img/imagemAna.jpg" class="imagemDesenvolvedor" alt="">            
+                        <img src="./img/imagemAna.png" class="imagemDesenvolvedor" alt="">            
                         <a href="" class="nomeDesenvolvedor"><p>Ana Adriely</p></a>
                     </div>
                 </div>            
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="../img/imagemDany.jpg" class="imagemDesenvolvedor" alt="">            
+                        <img src="./img/imagemDany.png" class="imagemDesenvolvedor" alt="">            
                         <a href="" class="nomeDesenvolvedor"><p>Danyella Cruz</p></a>
                     </div>
                 </div>
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="../img/imagemLais.jpg" class="imagemDesenvolvedor" alt="">            
+                        <img src="./img/imagemLais.png" class="imagemDesenvolvedor" alt="">            
                         <a href="" class="nomeDesenvolvedor"><p>Laís Viana</p></a>
                     </div>
                 </div>
@@ -141,13 +139,13 @@
             <div class="fileira">
                 <div class="desenvolvedorFileira2">
                     <div class="divDesenvolvedor">
-                        <img src="../img/imagemLana.jpg" class="imagemDesenvolvedor" alt="">            
+                        <img src="./img/imagemLana.jpg" class="imagemDesenvolvedor" alt="">            
                         <a href="" class="nomeDesenvolvedor"><p>Lana Andrade</p></a>
                     </div>
                 </div>
                 <div class="desenvolvedorFileira2">
                     <div class="divDesenvolvedor">
-                        <img src="../img/imagemWallacye.jpg" class="imagemDesenvolvedor" alt="">            
+                        <img src="./img/imagemWallacye.png" class="imagemDesenvolvedor" alt="">            
                         <a href="" class="nomeDesenvolvedor"><p>Wallacye Hein</p></a>
                     </div>
                 </div>
@@ -169,12 +167,9 @@
 
         <footer id="contato">
             <h2 class="titulosH2 txt">Contato</h2>
-            <p>Instagram: @nuwacompany</p>
-            <p>Celular: (11) 943118130</p>
-            <p>E-mail: companynuwa@gmail.com</p>
-            <p>Site da empresa:</p>
-            <a href="www.nw.com"><p>www.nw.com</p></a>
-            <p>(Link fictício)</p>
+            <p class="infoContato">Instagram: @nuwacompany</p>
+            <p class="infoContato">Celular: (11) 943118130</p>
+            <p class="infoContato">E-mail: companynuwa@gmail.com</p>
         </footer>
 
 
