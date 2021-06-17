@@ -1,11 +1,20 @@
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Raleway&display=swap) format('woff2');
+}
 *{
     padding: 0;
     margin: 0;    
-    font: 'Raleway' !important;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+body{
+  --fundo: white;
+  --detalhes: black;
+  --lua: 1;
+  --sol: 0;
+}
 h2{ 
   text-align: center; 
   font-weight: lighter;
@@ -15,15 +24,21 @@ img{
   border: 0;
 }
 #nuwa, #sobre, #historia, #desenvolvedores, #produtos, #contato, b{
-  background-color: white;
+  background-color: var(--fundo);
+}
+#nuwa, #sobre, #historia, #desenvolvedores, #produtos{
+  min-height: 100vh;
+}
+.fantasma{
+  height: 100px;
 }
 /* menu */
 nav{
-    background-color: white;
+    background-color: var(--fundo);
     width: 100%;
     height: 80px;
     position: fixed;
-    box-shadow: 0 0 0.5em black;
+    box-shadow: 0 0 0.5em var(--detalhes);
     z-index: 999;
 }
 #bntMenuLogo{
@@ -32,8 +47,8 @@ nav{
     height: 100%;
     text-decoration: none;
     font-size: 1.5rem;
-    color: black;
-    background-color: white;
+    color: var(--detalhes);
+    background-color: var(--fundo);
     border: none;
 }
 
@@ -43,7 +58,9 @@ nav{
     height: 100%;
     min-height: 80px;
 }
-
+#logo:hover{
+  cursor:pointer;
+}
 nav ul{
     width: 85.72%;
     height: 100%;
@@ -55,24 +72,41 @@ nav ul li{
     width: 14%;
     height: 100%;
     text-align: center;
-    list-style: none;    
+    list-style: none; 
 }
 
-#imgBtnMenuTemaEscuro{
-    height: 50%;
+#btnMenuTemaEscuro{
+  position: relative;
+  display: block;
+  text-align: center;
 }
-
 #btnMenuTemaEscuro:hover{
-    border-bottom: 0px solid white;
+    border-bottom: 0px solid var(--fundo);
 }
-
+.imgBtnMenuTemaEscuro{
+  height: 50%;
+  width:50px;
+  position:absolute;
+  margin-left: 32%;
+  margin-top: 10%;
+}
+#imgBtnMenuTemaEscuroLua{
+  top:0; 
+  left:0; 
+  opacity: var(--lua);
+}
+#imgBtnMenuTemaEscuroSol{
+  top:0; 
+  left:0; 
+  opacity: var(--sol);
+}
 nav ul li button{
     width: 100%;
     height: 100%;
     text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    background-color: white;
+    font-size: 1.3rem;
+    color: var(--detalhes);
+    background-color: var(--fundo);
     border: none;
 }
 
@@ -80,6 +114,7 @@ nav ul li button:hover{
     transition: .3s ease;
     color: #0066FF;
     border-bottom: 2px solid #0066FF;
+    cursor: pointer;
 }
 
 .bntMenuResponsivoCheckbox{
@@ -98,7 +133,7 @@ nav ul li button:hover{
 @media(max-width: 952px){
    
     nav ul li button{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -122,21 +157,30 @@ nav ul li button:hover{
         height: 15%;
     }
     nav ul li button{
-        background-color: #ededed;
+        background-color: var(--fundo);
     }
     nav ul li button:hover{
         color: #0066FF;
         border-bottom: 2px solid #0066FF;
-        border-top: 2px solid  #dcdcdc;
+        border-top: 2px solid  var(--fundo);
     }
 
     #menuResonsivoCheckbox:checked ~ .ulMenu{
         display: none;
     } 
+    .imgBtnMenuTemaEscuro{
+      margin-left: 40%;
+    }
 }
-@font-face {
-    font-family: 'Raleway';
-    src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@media(max-width: 200px){
+  .imgBtnMenuTemaEscuro{
+    margin-left: 34%;
+  }
+}
+@media(max-width: 150px){
+  .imgBtnMenuTemaEscuro{
+    margin-left: 10%;
+  }
 }
 /* Slider */
 #carrossel{
@@ -147,14 +191,14 @@ nav ul li button:hover{
   display: flex;
   justify-content: center;
   
-  background-color:white;
+  background-color:var(--fundo);
 }
 .img-slider{
   position: relative;
   width: 100%;
   height: 500px;
   
-  background:white;
+  background:var(--fundo);
 }
 
 .img-slider .slide{
@@ -184,7 +228,7 @@ nav ul li button:hover{
 }
 
 .img-slider .slide .info h2{
-  color: #fff;
+  color: var(--fundo);
   font-size: 45px;
   text-transform: uppercase;
   font-weight: 800;
@@ -192,8 +236,8 @@ nav ul li button:hover{
 }
 
 .img-slider .slide .info p{
-  color: #fff;
-  background: white;
+  color: var(--fundo);
+  background: var(--fundo);
   font-size: 16px;
   width: 60%;
   padding: 10px;
@@ -220,7 +264,7 @@ nav ul li button:hover{
 
 .img-slider .navigation .btn.active{
   background: #0066FF;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px var(--detalhes);
 }
 @media (max-width: 820px){
   .img-slider{
@@ -318,6 +362,8 @@ nav ul li button:hover{
 }
 h1{
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: var(--detalhes);
 }
 #titulo{
   margin: 0;
@@ -331,15 +377,7 @@ h1{
 }
 /* Sobre, História e Produtos */
 
-#textoHistoria{
-  padding-top: 8%;
-}
-
-#textoSobre{
-  padding-top: 8%;
-}
-
-#textoProdutos{
+#textoHistoria, #textoSobre, #textoProdutos{
   padding-top: 8%;
 }
 
@@ -347,6 +385,8 @@ h1{
   font-size: 25px;
   margin-left: 5%;
   margin-right: 5%;
+  font-family: 'Raleway', sans-serif;
+  color: var(--detalhes);
 }
 
 .titulosH2{
@@ -386,7 +426,7 @@ h1{
 
 /* Desenvolvedores */
 #desenvolvedores{
-  border: 20px solid white;
+  border: 20px solid var(--fundo);
 }
 .fileira{
   width: 100%;
@@ -397,7 +437,6 @@ h1{
 .desenvolvedorFileira1{
   position: relative;
   flex: 1;
-  max-width: 300px;
   height: 230px;
   margin: 10px;
 }
@@ -418,7 +457,7 @@ h1{
 }
 .nomeDesenvolvedor{
   text-decoration: none;
-  color: black;
+  color: var(--detalhes);
   font-size: larger;
 }
 
@@ -441,19 +480,29 @@ h1{
   padding-bottom: 50px;
   display: block;
   text-align:center;
-  box-shadow: 0 0 0.5em black;
+  box-shadow: 0 0 0.5em var(--detalhes);
 }
 
 .infoContato{
   font-size: 20px;
 }
 /* Modo escuro */
-html[data-theme='dark'] {
-  background: #2222;
-  filter: invert(1) hue-rotate(180deg)
+body.escuro{
+  --fundo: #222222;
+  --detalhes: white;
+  --lua: 0;
+  --sol: 1;
 }
-html[data-theme='dark'] img {
-  filter: invert(1) hue-rotate(180deg)
+/* Animação de título */
+.revelar{
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
 }
 
+.revelar.ativo{
+  transform: translateY(0);
+  opacity: 1;
+}
 

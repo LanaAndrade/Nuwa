@@ -1,10 +1,10 @@
-
+//carrossel
 function carrossel(){
   var slides = document.querySelectorAll('.slide');
   var btns = document.querySelectorAll('.btn');
   let currentSlide = 1;
 
-// Javascript for image slider manual navigation
+// Navegação manual
   var manualNav = function(manual){
     slides.forEach((slide) => {
       slide.classList.remove('active');
@@ -24,7 +24,7 @@ function carrossel(){
     currentSlide = i;
   });
   });
-  // Javascript for image slider autoplay navigation
+  // Navegação automática
   var repeat = function(activeClass){
     let active = document.getElementsByClassName('active');
     let i = 1;
@@ -53,23 +53,30 @@ function carrossel(){
   repeat();
 }
 
-//Efeito rolagem
-//javascript for navigation bar effects on scroll
+//Animação rolagem
 window.addEventListener("scroll", function(){
 const header = document.querySelector("header");
 header.classList.toggle('sticky', window.scrollY > 0);
 });
 
 //Modo escuro
-const htmlEl = document.getElementsByTagName('html')[0];
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+document.querySelector('#btnMenuTemaEscuro').addEventListener('click', () => {
+  document.body.classList.toggle('escuro')
+})
 
-if (currentTheme) {
-  htmlEl.dataset.theme = currentTheme;
-}
+//animação títulos
+window.addEventListener("scroll", reveal);
 
-// When the user changes the theme, we need to save the new value on local storage
-const toggleTheme = (theme) => {
-  htmlEl.dataset.theme = theme;
-  localStorage.setItem('theme', theme);
+function reveal(){
+  var revelar = document.querySelectorAll(".revelar");
+
+  for(var i = 0; i < revelar.length; i++){
+    var windowHeight = window.innerHeight;
+    var revealTop = revelar[i].getBoundingClientRect().top;
+    var revealPoint = 50;
+
+    if(revealTop < windowHeight - revealPoint){
+      revelar[i].classList.add("ativo");
+    }
+  }
 }

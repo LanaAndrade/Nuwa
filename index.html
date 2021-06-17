@@ -6,13 +6,16 @@
         <link rel="icon" type="img/png" href="./img/logoNuwa.png" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script type="text/javascript" src="js/nuwaScript.js"></script>
+        <script type="text/javascript" src="js/nuwaScript.js" defer></script>
 
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
-    <body>
+    <body class="dark">
         <header>
             <nav>
                 <input type="checkbox" id="menuResonsivoCheckbox">
@@ -29,7 +32,12 @@
                     <li><button onclick="location.href='#desenvolvedores'">Desenvolvedores</button></li>
                     <li><button onclick="location.href='#produtos'">Produtos</button></li>
                     <li><button onclick="location.href='#contato'">Contato</button></li>
-                    <li><button id="btnMenuTemaEscuro" onclick="toggleTheme('dark');"><img src="./img/luaModoEscuro.png" id="imgBtnMenuTemaEscuro" alt="Logo da Nüwa"></button></li>
+                    <li>
+                        <button id="btnMenuTemaEscuro">
+                            <img src="./img/luaModoEscuro.png" class="imgBtnMenuTemaEscuro" id="imgBtnMenuTemaEscuroLua" alt="Troca de temas">
+                            <img src="./img/solModoClaro.png" class="imgBtnMenuTemaEscuro" id="imgBtnMenuTemaEscuroSol" alt="Troca de temas">
+                        </button>
+                    </li>
                 </ul>
 
             </nav>
@@ -91,11 +99,12 @@
         </section>                                             
 
         <section id="sobre" class="textoComImagem">
+            <div class="fantasma"></div>
             <div id="divImagemSobre"class="textoComImagemFilho1 textoComImagemFilho" >
                 <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemSobre" alt="">            
             </div>
             <div id="textoSobre" class="textoComImagemFilho">
-                <h2 class="titulosH2 txt">Sobre</h2>
+                <h2 class="titulosH2 txt revelar">Sobre</h2>
                 <p class="txt">
                     Nossa empresa busca trazer softwares práticos, modernos, ágeis, simples, competentes e seguros que possam facilitar a vida dos usuários durante seu dia a dia. 
                 </p>
@@ -103,50 +112,52 @@
         </section>
 
         <section id="historia" class="textoComImagem">
+            <div class="fantasma"></div>
             <div id="textoHistoria" class="textoComImagemFilho1 textoComImagemFilho">
-                <h2 class="titulosH2 txt">História</h2>
-                <p class="txt">
+                <h2 class="titulosH2 txt revelar">História</h2>
+                <p class="txt revelar">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div id="divImagemHistoria" class="textoComImagemFilho">
+            <div id="divImagemHistoria" class="textoComImagemFilho revelar">
                 <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemHistoria" alt="">            
             </div>
         </section>
 
         <section id="desenvolvedores">
-            <h2 class="titulosH2 txt">Desenvolvedores</h2>
+            <div class="fantasma"></div>
+            <h2 class="titulosH2 txt revelar">Desenvolvedores</h2>
             <div class="fileira">
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="./img/imagemAna.png" class="imagemDesenvolvedor" alt="">            
-                        <a href="" class="nomeDesenvolvedor"><p>Ana Adriely</p></a>
+                        <a href=""><img src="./img/imagemAna.png" class="imagemDesenvolvedor revelar" href="" alt="Ana Adriely"></a>          
+                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Ana Adriely</p></a>
                     </div>
                 </div>            
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="./img/imagemDany.png" class="imagemDesenvolvedor" alt="">            
-                        <a href="" class="nomeDesenvolvedor"><p>Danyella Cruz</p></a>
+                        <a href=""><img src="./img/imagemDany.png" class="imagemDesenvolvedor revelar" href="" alt="Danyella Cruz"></a>          
+                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Danyella Cruz</p></a>
                     </div>
                 </div>
                 <div class="desenvolvedorFileira1">
                     <div class="divDesenvolvedor">
-                        <img src="./img/imagemLais.png" class="imagemDesenvolvedor" alt="">            
-                        <a href="" class="nomeDesenvolvedor"><p>Laís Viana</p></a>
+                        <a href=""><img src="./img/imagemLais.png" class="imagemDesenvolvedor revelar" href="" alt="Laís Viana"></a>           
+                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Laís Viana</p></a>
                     </div>
                 </div>
             </div>
             <div class="fileira">
                 <div class="desenvolvedorFileira2">
                     <div class="divDesenvolvedor">
-                        <img src="./img/imagemLana.jpg" class="imagemDesenvolvedor" alt="">            
-                        <a href="" class="nomeDesenvolvedor"><p>Lana Andrade</p></a>
+                        <a href=""><img src="./img/imagemLana.jpg" class="imagemDesenvolvedor revelar" href="" alt="Lana Andrade"></a>           
+                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Lana Andrade</p></a>
                     </div>
                 </div>
                 <div class="desenvolvedorFileira2">
                     <div class="divDesenvolvedor">
-                        <img src="./img/imagemWallacye.png" class="imagemDesenvolvedor" alt="">            
-                        <a href="" class="nomeDesenvolvedor"><p>Wallacye Hein</p></a>
+                        <a href=""><img src="./img/imagemWallacye.png" class="imagemDesenvolvedor revelar" href="" alt="Wallacye Hein"></a>           
+                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Wallacye Hein</p></a>
                     </div>
                 </div>
             </div>
@@ -154,24 +165,23 @@
         </section>
 
         <section id="produtos" class="textoComImagem">
+            <div class="fantasma"></div>
             <div id="textoProdutos" class="textoComImagemFilho1 textoComImagemFilho">
-                <h2 class="titulosH2 txt">Produtos</h2>
-                <p class="txt">
+                <h2 class="titulosH2 txt revelar">Produtos</h2>
+                <p class="txt revelar">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div id="divImagemProdutos" class="textoComImagemFilho">
+            <div id="divImagemProdutos" class="textoComImagemFilho revelar">
                 <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemProdutos" alt="">            
             </div>        
         </section>
 
         <footer id="contato">
-            <h2 class="titulosH2 txt">Contato</h2>
-            <p class="infoContato">Instagram: @nuwacompany</p>
-            <p class="infoContato">Celular: (11) 943118130</p>
-            <p class="infoContato">E-mail: companynuwa@gmail.com</p>
-        </footer>
-
-
+            <h2 class="titulosH2 txt revelar">Contato</h2>
+            <p class="infoContato txt">Instagram: @nuwacompany</p>
+            <p class="infoContato txt">Celular: (11) 943118130</p>
+            <p class="infoContato txt">E-mail: companynuwa@gmail.com</p>
+        </footer>        
     </body>
 </html>
