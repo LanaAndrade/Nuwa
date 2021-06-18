@@ -72,10 +72,10 @@ function reveal(){
 
   for(var i = 0; i < revelar.length; i++){
     var windowHeight = window.innerHeight;
-    var revealTop = revelar[i].getBoundingClientRect().top;
+    var revelarTopo = revelar[i].getBoundingClientRect().top;
     var revealPoint = 50;
 
-    if(revealTop < windowHeight - revealPoint){
+    if(revelarTopo < windowHeight - revealPoint){
       revelar[i].classList.add("ativo");
     }
   }

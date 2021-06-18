@@ -13,22 +13,22 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="js/nuwaScript.js" defer></script>
 
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script type="text/javascript" src="js/menuResponsivo.js" defer></script>
     </head>
     <body class="dark">
         <header>
             <nav>
                 <input type="checkbox" id="menuResonsivoCheckbox">
                 <label for="menuResonsivoCheckbox" class="bntMenuResponsivoCheckbox">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars" id="iconeMenuResponsivo"></i>
                 </label>
 
-                <button id="bntMenuLogo" onclick="location.href='#carrossel'"><img src="./img/logoNuwa.png" id="logo" alt="Logo da Nüwa"></button>
+                <button id="bntMenuLogo" onclick="location.href='#nuwa'"><img src="./img/logoNuwa.png" id="logo" alt="Logo da Nüwa"></button>
 
                 <ul class="ulMenu">
-                    <li><button onclick="location.href='#carrossel'">Início</button></li>
-                    <li><button onclick="location.href='#sobre'">Sobre</button></li>
-                    <li><button onclick="location.href='#historia'">História</button></li>
+                    <li><button onclick="location.href='#missao'">Missão</button></li>
+                    <li><button onclick="location.href='#visao'">Visão</button></li>
+                    <li><button onclick="location.href='#valores'">Valores</button></li>
                     <li><button onclick="location.href='#desenvolvedores'">Desenvolvedores</button></li>
                     <li><button onclick="location.href='#produtos'">Produtos</button></li>
                     <li><button onclick="location.href='#contato'">Contato</button></li>
@@ -47,39 +47,19 @@
             <figure id="carrossel">
                     <div class="img-slider">
                         <div class="slide active">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                            <div class="info">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                            <img src="./img/slider1.jfif" alt="">
                         </div>
                         <div class="slide">
-                            <img src="https://image.freepik.com/fotos-gratis/quimicos-realizando-experimentos_1098-17095.jpg" alt="">
-                            <div class="info">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                            <img src="./img/slider2jpg.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="https://image.freepik.com/fotos-gratis/pesquisadora-no-laboratorio-com-oculos-de-seguranca_23-2148816389.jpg" alt="">
-                            <div class="info">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                            <img src="./img/slider3.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="https://image.freepik.com/fotos-gratis/retrato-de-pesquisadora-em-laboratorio-com-tubo-de-ensaio-e-espaco-de-copia_23-2148816383.jpg" alt="">
-                            <div class="info">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                            <img src="./img/slider4.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
-                            <div class="info">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                            <img src="./img/slider5.jfif" alt="">
                         </div>
                         <div class="navigation">
                             <div class="btn active"></div>
@@ -95,73 +75,91 @@
             </figure> 
             <div id="titulo">
                 <h1>Nüwa</h1>
+                <p>Nossa empresa busca trazer softwares práticos, modernos, ágeis, simples, competentes e seguros que possam facilitar a vida dos usuários durante seu dia a dia.</p>
             </div>                  
         </section>                                             
 
-        <section id="sobre" class="textoComImagem">
+        <section id="missao" class="textoComImagem">
             <div class="fantasma"></div>
-            <div id="divImagemSobre"class="textoComImagemFilho1 textoComImagemFilho" >
-                <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemSobre" alt="">            
+            <div id="divImagemMissao"class="textoComImagemFilho1 textoComImagemFilho revelar" >
+                <img src="./img/missao.jpg" class="imagem" id="imagemSobre" alt="">            
             </div>
-            <div id="textoSobre" class="textoComImagemFilho">
-                <h2 class="titulosH2 txt revelar">Sobre</h2>
-                <p class="txt">
-                    Nossa empresa busca trazer softwares práticos, modernos, ágeis, simples, competentes e seguros que possam facilitar a vida dos usuários durante seu dia a dia. 
+            <div id="textoMissao" class="textoComImagemFilho">
+                <h2 class="titulosH2 txt revelar">Missão</h2>
+                <p class="txt revelar">
+                    Promover ao cliente organização e segurança com facilidade e modernidade, fornecendo ajuda para o máximo de pessoas de forma gratuita, contribuindo para um futuro melhor.
                 </p>
             </div>
         </section>
 
-        <section id="historia" class="textoComImagem">
+        <section id="visao" class="textoComImagem">
             <div class="fantasma"></div>
-            <div id="textoHistoria" class="textoComImagemFilho1 textoComImagemFilho">
-                <h2 class="titulosH2 txt revelar">História</h2>
+            <div id="textoVisao" class="textoComImagemFilho1 textoComImagemFilho">
+                <h2 class="titulosH2 txt revelar">Visão</h2>
                 <p class="txt revelar">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Ser a primeira e melhor alternativa dos nossos clientes, além de obter reconhecimento nacional e ser referência de qualidade e serviço.
                 </p>
             </div>
-            <div id="divImagemHistoria" class="textoComImagemFilho revelar">
-                <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemHistoria" alt="">            
+            <div id="divImagemVisao" class="textoComImagemFilho revelar">
+                <img src="./img/visao.jpg" id="imagemHistoria" class="imagem" alt="">            
+            </div>
+        </section>
+
+        <section id="valores" class="textoComImagem">
+            <div class="fantasma"></div>
+            <div id="divImagemValores" class="textoComImagemFilho revelar">
+                <img src="./img/valores.jpg" id="imagemHistoria" class="imagem" alt="">            
+            </div>
+            <div id="textoValores" class="textoComImagemFilho1 textoComImagemFilho">
+                <h2 class="titulosH2 txt revelar">Valores</h2>
+                <p class="txt revelar">
+                    Transparecer confiabilidade; 
+                    Proporcionar organização e utilidade; 
+                    Promover acessibilidade; 
+                    Atuar eticamente e profissionalmente; 
+                </p>
             </div>
         </section>
 
         <section id="desenvolvedores">
             <div class="fantasma"></div>
-            <h2 class="titulosH2 txt revelar">Desenvolvedores</h2>
-            <div class="fileira">
-                <div class="desenvolvedorFileira1">
-                    <div class="divDesenvolvedor">
-                        <a href=""><img src="./img/imagemAna.png" class="imagemDesenvolvedor revelar" href="" alt="Ana Adriely"></a>          
-                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Ana Adriely</p></a>
+            <div id="divDesenvolvedores">
+                <h2 class="titulosH2 txt revelar">Desenvolvedores</h2>
+                <div class="fileira">
+                    <div class="desenvolvedorFileira1">
+                        <div class="divDesenvolvedor">
+                            <a href="https://www.linkedin.com/in/ana-adriely-6882b9188"><img src="./img/imagemAna.png" class="imagemDesenvolvedor revelar" href="" alt="Ana Adriely"></a>          
+                            <a href="https://www.linkedin.com/in/ana-adriely-6882b9188" class="nomeDesenvolvedor"><p class="revelar">Ana Adriely</p></a>
+                        </div>
+                    </div>            
+                    <div class="desenvolvedorFileira1">
+                        <div class="divDesenvolvedor">
+                            <a href="https://www.linkedin.com/in/dany-souza-28677b207"><img src="./img/imagemDany.png" class="imagemDesenvolvedor revelar" href="" alt="Danyella Cruz"></a>          
+                            <a href="https://www.linkedin.com/in/dany-souza-28677b207" class="nomeDesenvolvedor"><p class="revelar">Danyella Cruz</p></a>
+                        </div>
                     </div>
-                </div>            
-                <div class="desenvolvedorFileira1">
-                    <div class="divDesenvolvedor">
-                        <a href=""><img src="./img/imagemDany.png" class="imagemDesenvolvedor revelar" href="" alt="Danyella Cruz"></a>          
-                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Danyella Cruz</p></a>
+                    <div class="desenvolvedorFileira1">
+                        <div class="divDesenvolvedor">
+                            <a href="https://www.linkedin.com/in/la%C3%ADs-viana-7a51b3215"><img src="./img/imagemLais.png" class="imagemDesenvolvedor revelar" href="" alt="Laís Viana"></a>           
+                            <a href="https://www.linkedin.com/in/la%C3%ADs-viana-7a51b3215" class="nomeDesenvolvedor"><p class="revelar">Laís Viana</p></a>
+                        </div>
                     </div>
                 </div>
-                <div class="desenvolvedorFileira1">
-                    <div class="divDesenvolvedor">
-                        <a href=""><img src="./img/imagemLais.png" class="imagemDesenvolvedor revelar" href="" alt="Laís Viana"></a>           
-                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Laís Viana</p></a>
+                <div class="fileira">
+                    <div class="desenvolvedorFileira2">
+                        <div class="divDesenvolvedor">
+                            <a href="https://www.linkedin.com/in/lanaoliveiraandrade/"><img src="./img/imagemLana.jpg" class="imagemDesenvolvedor revelar" href="" alt="Lana Andrade"></a>           
+                            <a href="https://www.linkedin.com/in/lanaoliveiraandrade/" class="nomeDesenvolvedor"><p class="revelar">Lana Andrade</p></a>
+                        </div>
+                    </div>
+                    <div class="desenvolvedorFileira2">
+                        <div class="divDesenvolvedor">
+                            <a href="https://www.linkedin.com/in/wallacye-luahn-xavier-hein-54a7b8144"><img src="./img/imagemWallacye.png" class="imagemDesenvolvedor revelar" href="" alt="Wallacye Hein"></a>           
+                            <a href="https://www.linkedin.com/in/wallacye-luahn-xavier-hein-54a7b8144" class="nomeDesenvolvedor"><p class="revelar">Wallacye Hein</p></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="fileira">
-                <div class="desenvolvedorFileira2">
-                    <div class="divDesenvolvedor">
-                        <a href=""><img src="./img/imagemLana.jpg" class="imagemDesenvolvedor revelar" href="" alt="Lana Andrade"></a>           
-                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Lana Andrade</p></a>
-                    </div>
-                </div>
-                <div class="desenvolvedorFileira2">
-                    <div class="divDesenvolvedor">
-                        <a href=""><img src="./img/imagemWallacye.png" class="imagemDesenvolvedor revelar" href="" alt="Wallacye Hein"></a>           
-                        <a href="" class="nomeDesenvolvedor"><p class="revelar">Wallacye Hein</p></a>
-                    </div>
-                </div>
-            </div>
-                
         </section>
 
         <section id="produtos" class="textoComImagem">
@@ -169,11 +167,13 @@
             <div id="textoProdutos" class="textoComImagemFilho1 textoComImagemFilho">
                 <h2 class="titulosH2 txt revelar">Produtos</h2>
                 <p class="txt revelar">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    O sistema NW Amostras auxilia instituições científicas na organização e monitoramento de dados, apoiando os técnicos biomédicos em seus laboratórios tornando sua pesquisa mais simples de ser efetuada. <br>
+                    O programa traz isso de uma forma moderna, prática, intuitiva e de fácil acesso para que os pesquisadores de todas as idades possam utilizar sem grandes dificuldades.                 
                 </p>
+                <button id="nwAmostrasBtn" class="revelar" onclick="location.href=''">NW Amostras</button>
             </div>
             <div id="divImagemProdutos" class="textoComImagemFilho revelar">
-                <img src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg" id="imagemProdutos" alt="">            
+                <img src="./img/produto.png" id="imagemProdutos" class="imagem" alt="">            
             </div>        
         </section>
 
