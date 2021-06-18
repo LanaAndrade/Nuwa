@@ -80,3 +80,7 @@ function reveal(){
     }
   }
 }
+//ir para projeto
+document.getElementById("nwAmostrasBtn").onclick = function () {
+  location.href = "https://www.youtube.com/watch?v=VRZV7oS3KiU";
+};
