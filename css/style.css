@@ -239,6 +239,10 @@ nav ul li button:hover{
   background:var(--fundo);
 }
 
+.navigation{
+  display: none !important;
+}
+
 .img-slider .slide{
   z-index: 1;
   position: absolute;
