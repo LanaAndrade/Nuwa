@@ -235,7 +235,7 @@ nav ul li button:hover{
   position: relative;
   width: 100%;
   height: 500px;
-  
+  object-fit: cover;
   background:var(--fundo);
 }
 
