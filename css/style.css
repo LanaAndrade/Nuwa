@@ -261,8 +261,11 @@ nav ul li button:hover{
   width: 100%;
   border-radius: 5px;
   height: 500px;
+  object-fit: cover;
 }
-
+.slider{
+  object-fit: cover;
+}
 .img-slider .slide .info{
   position: absolute;
   top: 0;
